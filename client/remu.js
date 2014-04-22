@@ -36,7 +36,7 @@ remu.permAsk = function (user) {
 };
 remu.connect = function () {
 	if (localStorage.skipped) remu.openView('curgroup');
-	remu.socket = io.connect('http://remu.nodester.com',{rememberTransport: false, port: 80});
+	remu.socket = io.connect('http://localhost',{rememberTransport: false, port: 8080});
 	remu.socket.on('groupstate', function (r) {
 		document.getElementById("connections").innerHTML = (r.number == 1) ? "is one connection" : "are "+r.number+" connections";
 	});

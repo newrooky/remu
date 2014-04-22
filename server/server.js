@@ -18,7 +18,7 @@ Array.prototype.remove= function(){
     return this;
 }
 
-var io = require('socket.io').listen(17058);
+var io = require('socket.io').listen(8080);
 
 var group = function (master) {
   this.master = master;
